@@ -7,12 +7,6 @@ terraform {
       version = "~> 3.0"
     }
   }
-  backend "remote" {
-    organization = "visualpath-demo"
-    workspaces {
-      name = "terraform-github-actions"
-    }
-  }
 }
 provider "aws" {
   region = "us-east-1"
