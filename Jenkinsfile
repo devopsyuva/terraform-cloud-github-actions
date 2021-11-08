@@ -6,22 +6,22 @@ pipeline {
                 sh 'terraform init'
             }
         }
-        steps('Terraform Format') {
+        stage('Terraform Format') {
             steps {
                 sh 'terraform fmt -check'
             }
         }
-        steps('Terraform Validate') {
+        stage('Terraform Validate') {
             steps {
                 sh 'terraform validate'
             }
         }
-        steps('Terraform Planning') {
+        stage('Terraform Planning') {
             steps {
                 sh 'terraform plan -no-color'
             }
         }
-        steps('Terraform Apply') {
+        stage('Terraform Apply') {
             steps {
                 sh 'terraform apply -auto-approve'
             }
