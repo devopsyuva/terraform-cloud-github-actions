@@ -26,6 +26,7 @@ pipeline {
         stage('Terraform Planning') {
             steps {
                 sh 'terraform plan -no-color'
+                input message: "Approve build or Discard?"
             }
         }
         stage('Terraform Apply') {
