@@ -12,5 +12,5 @@
 ## Note:
 - Destroy everything:
 ```
-terraform destroy and rm -rf .terraform* terraform.tfstate*
+terraform destroy -auto-approve and rm -rf .terraform* terraform.tfstate*
 ```
