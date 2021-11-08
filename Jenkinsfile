@@ -4,6 +4,8 @@ pipeline {
         stage('Terraform Initialization') {
             steps {
                 sh 'terraform init'
+                sh 'pwd'
+                sh 'ls -al'
             }
         }
         stage('Terraform Format') {
