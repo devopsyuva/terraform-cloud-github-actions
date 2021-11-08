@@ -14,3 +14,6 @@
 ```
 terraform destroy -auto-approve and rm -rf .terraform* terraform.tfstate*
 ```
+
+## References:
+- [GitHub Actions](https://docs.github.com/en/actions)
