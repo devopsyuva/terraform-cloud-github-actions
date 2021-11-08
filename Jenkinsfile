@@ -6,6 +6,7 @@ pipeline {
                 sh 'terraform init'
                 sh 'pwd'
                 sh 'ls -al'
+                sh 'printenv'
             }
         }
         stage('Terraform Format') {
