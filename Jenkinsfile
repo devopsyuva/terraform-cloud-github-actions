@@ -34,5 +34,11 @@ pipeline {
                 sh 'terraform apply -auto-approve'
             }
         }
+        stage('Terraform Destroy') {
+            steps {
+                sh 'terraform destroy -auto-approve'
+                input message: "Approve Destroying of resource build or Discard?"
+            }
+        }
     }
 }
